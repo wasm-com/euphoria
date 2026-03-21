@@ -4,14 +4,14 @@
  * Requires: Windows, MSVC or MinGW, links against httpapi.lib ws2_32.lib
  *
  * Build (MSVC):
- *   cl /LD /EHsc /std:c++17 EuphoriaServer.cpp /link /OUT:EuphoriaServer.dll
+ *   cl /LD /EHsc /std:c++17 euphoriaServer.cpp /link /OUT:euphoriaServer.dll
  *
  * Build (MinGW):
- *   g++ -shared -O2 -o EuphoriaServer.dll EuphoriaServer.cpp -lhttpapi -lws2_32 -static-libgcc -static-libstdc++
+ *   g++ -shared -O2 -o euphoriaServer.dll euphoriaServer.cpp -lhttpapi -lws2_32 -static-libgcc -static-libstdc++
  *
  * Usage from Python:
  *   import ctypes, subprocess
- *   dll = ctypes.WinDLL("EuphoriaServer.dll")
+ *   dll = ctypes.WinDLL("euphoriaServer.dll")
  *   dll.EuphoriaStart()
  *   input("press enter to stop")
  *   dll.EuphoriaStop()
